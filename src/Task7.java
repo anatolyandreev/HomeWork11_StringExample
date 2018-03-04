@@ -4,21 +4,20 @@ import java.util.regex.Pattern;
 public class Task7 {
 
 	// Из текста удалить все символы, кроме пробелов, не являющиеся буквами.
-	// Между
-	// последовательностями подряд идущих букв оставить хотя бы один пробел.
+	// Между последовательностями подряд идущих букв оставить хотя бы один пробел.
 	public static void main(String[] args) {
-		StringBuilder str = new StringBuilder(
-				"Из текста удалить все символы, кроме пробелов, не являющиеся буквами. Между ");
+		String str = new String(
+				"Из текста удалить все **%* симво-лы, кроме пр%обелов, не я0вляющиеся буквам)и. + Между последовательностями подряд идущих букв оставить хотя бы один пробел.");
 
-		Pattern p1 = Pattern.compile("\\p{Punct}");
-		Matcher m1 = p1.matcher(str);		
+		//System.out.println(str.replaceAll("[^а-яА-Я]", ""));
 		
-		for (int i = 0; i < str.length(); i++) {
-			if (m1.find()) {
-				System.out.println(i);
-				System.out.println(m1.group());
-			}
+		String[] strArray = str.split(" ");
+		StringBuilder sb = new StringBuilder();
+		
+		for (String word : strArray) {
+			String newWord = word.replaceAll("[^а-яА-Я]", "");
+			sb = sb.append(newWord + " ");
 		}
-		// System.out.println(m1.group());
+		System.out.println(sb);
 	}
 }
