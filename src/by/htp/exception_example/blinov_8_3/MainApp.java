@@ -13,7 +13,7 @@ public class MainApp {
 			doG();
 			doH();
 			}
-//		catch(C e){}catch(D e){}catch(H e){}catch(A e){} //1
+		catch(C e){}catch(D e){}catch(H e){}catch(A e){} //1
 //		catch(C e){}catch(D e){}catch(E e){}catch(A e){} //2
 //		catch(C e){}catch(D e){}catch(G e){}catch(A e){} //3
 //		catch(A e){}catch(D e){}catch(G e){}catch(H e){} //4
