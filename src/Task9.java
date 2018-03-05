@@ -17,8 +17,8 @@ public class Task9 {
 		
 
 		String str = "Определить, сколько раз повторяется Определить в тексте каждое определить слово, которое встречается в нем.";
-		String[] initialArrayWithDuplicates = str.toLowerCase().replaceAll("[\\p{Punct}]", "").split("\\s+");
-		String[] arrayWithDuplicates = str.toLowerCase().replaceAll("[\\p{Punct}]", "").split("\\s+");
+		String[] initialArrayWithDuplicates = str.toLowerCase().replaceAll("\\p{Punct}", "").split("\\s+");
+		String[] arrayWithDuplicates = str.toLowerCase().replaceAll("\\p{Punct}", "").split("\\s+");
 
 		int noOfUniqueElements = arrayWithDuplicates.length;
 		int size = arrayWithDuplicates.length;
@@ -42,7 +42,7 @@ public class Task9 {
 					counter++;
 				}
 			}
-			System.out.println("word " + "'" + arrayWithoutDuplicates[i] + "'" + " appears " + counter + " times");
+			System.out.println("word '" + arrayWithoutDuplicates[i] + "' appears " + counter + " times");
 		}
 
 	}
